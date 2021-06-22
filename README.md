@@ -1,4 +1,19 @@
-# Bundling [plotly.js](https://github.com/plotly/plotly.js) with Webpack
+## Plotly build to support micro:bit data logging
+
+This is a fork of https://github.com/plotly/plotly-webpack used to build the
+Plotly version used for datalogging.
+
+We build our own as we only need one chart type and Plotly is very large.
+
+To rebuild:
+
+```bash
+$ npm run webpack-prod
+```
+
+Retain the hash when hosting the file.
+
+## Bundling [plotly.js](https://github.com/plotly/plotly.js) with Webpack
 
 *Note*: Webpack now raises a `Can't resolve 'vertx'` warning, which can *safely be ignored* and suppressed using [Webpack's IgnorePlugin](https://webpack.js.org/plugins/ignore-plugin/) like so: `new webpack.IgnorePlugin(/vertx/)`. The root cause of this warning is that `plotly.js` depends on [`es6-promise`](https://github.com/stefanpenner/es6-promise/blob/master/lib/es6-promise/asap.js), which tries to load `vertx` but gracefully falls back if it isn't present.
 

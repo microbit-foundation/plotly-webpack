@@ -4,7 +4,9 @@ module.exports = {
   entry: "./index.js",
   output: {
     path: __dirname,
-    filename: "bundle.js"
+    filename: 'plotly-scatter-[contenthash].js',
+    library: 'Plotly',
+    libraryTarget: 'umd',
   },
   module: {
     rules: [

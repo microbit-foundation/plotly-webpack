@@ -2,3 +2,4 @@ bundle.js
 node_modules
 yarn.lock
 package-lock.json
+plotly-scatter*.js

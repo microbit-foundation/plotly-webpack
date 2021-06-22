@@ -1,3 +1,8 @@
-var Plotly = require('plotly.js');
+'use strict';
 
-Plotly.plot("gd", [{ x: [0, 1], y: [0, 1] }]);
+var Plotly = require('plotly.js/lib/core');
+Plotly.register([
+    require('plotly.js/lib/scatter'),
+]);
+
+module.exports = Plotly;
